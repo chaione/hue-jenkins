@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/chaione/hue.git
+  revision: e435f445c8d7c49884d531c8538231f8e19b8b47
+  specs:
+    hue (0.1.1)
+      multi_json
+      thor
+
+GIT
   remote: https://github.com/turboladen/upnp.git
   revision: 6d535f81b50b68f98b97578cb97f0acf3133884c
   specs:
@@ -9,13 +17,6 @@ GIT
       log_switch (>= 0.4.0)
       nori (>= 2.0.2)
       savon (~> 2.0)
-
-PATH
-  remote: ./hue
-  specs:
-    hue (0.1.1)
-      multi_json
-      thor
 
 GEM
   remote: https://rubygems.org/

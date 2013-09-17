@@ -4,11 +4,11 @@ Bundler.require
 require 'open-uri'
 require 'json'
 
-if ENV['JENKINS_URL'].blank?
+if ENV['JENKINS_URL'].nil?
   raise "This script requires the JENKINS_URL env var to be defined."
 end
 
-light_index = if ENV['HUE_LIGHT_INDEX'].blank? ? 0 : ENV['HUE_LIGHT_INDEX'].to_i
+light_index = ENV['HUE_LIGHT_INDEX'].nil? ? 0 : ENV['HUE_LIGHT_INDEX'].to_i
 jenkins_url = ENV['JENKINS_URL'] + "/api/json"
 pattern = ENV['JENKINS_JOB_PATTERN']
 http_basic_auth = [ENV['JENKINS_HTTP_BASIC_USERNAME'], ENV['JENKINS_HTTP_BASIC_PASSWORD']] if ENV['JENKINS_HTTP_BASIC_USERNAME'] && ENV['JENKINS_HTTP_BASIC_PASSWORD']
