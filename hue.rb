@@ -30,7 +30,7 @@ light = hue.lights[light_index]
 
 puts "Checking for build status..."
 uri = URI.parse(jenkins_url)
-json = JSON.parse(open(uri, http_basic_authentication: http_basic_authentication).read)
+json = JSON.parse(open(uri, http_basic_authentication: http_basic_auth).read)
 
 jobs = json["jobs"].map {|j| Job.new(j)}
 jobs = jobs.select {|j| j.name =~ /#{pattern}/} if pattern
