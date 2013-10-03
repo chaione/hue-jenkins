@@ -38,9 +38,9 @@ failed_jobs = jobs.select {|j| j.failed? }
 
 if failed_jobs.any?
   puts "The following job(s) failed:  #{failed_jobs.map(&:name)}"
-  light.set_state(:hue => 0, :saturation => 255, :brightness => 255)
+  light.set_state(:hue => 0, :sat => 255, :bri => 255)
 else
   puts "builds #{jobs.map(&:name)} passing, setting green"
-  light.set_state(:hue => 25500, :saturation => 255, :brightness => 255)
+  light.set_state(:hue => 25500, :sat => 255, :bri => 255)
 end
 
