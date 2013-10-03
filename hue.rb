@@ -41,6 +41,6 @@ if failed_jobs.any?
   light.set_state(:hue => 0, :sat => 255, :bri => 255)
 else
   puts "builds #{jobs.map(&:name)} passing, setting green"
-  light.set_state(:hue => 25500, :sat => 255, :bri => 255)
+  light.set_state(:hue => 25500, :sat => 100, :bri => 255)
 end
 
